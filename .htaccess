@@ -1,0 +1,12 @@
+Options -MultiViews
+
+RewriteEngine on
+
+RewriteRule ^about/?$	about.php
+
+RewriteRule ^contact/?$	contact_us.php
+
+RewriteRule ^([A-Za-z_]+)/?$		destinations_list.php?ref=$1
+
+#Final Destination
+RewriteRule ^([0-9]+)/([A-Za-z_]+)?/([A-Za-z_]+)?/?$ 	final_destination.php?id=$1&ref=$2&name=$3
